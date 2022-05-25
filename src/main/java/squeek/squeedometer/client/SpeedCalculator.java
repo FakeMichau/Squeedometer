@@ -5,8 +5,8 @@ import squeek.squeedometer.config.SqueedometerConfig;
 public class SpeedCalculator {
     public static String speedText(double speed, SqueedometerConfig.SpeedUnit speedUnit) {
         return switch (speedUnit) {
-            case BLOCKS_PER_SECOND -> String.format("%.2f blocks/sec", metersPerSecond(speed));
-            case KILOMETERS_PER_HOUR -> String.format("%.2f km/h", kilometersPerSecond(speed));
+            case BLOCKS_PER_SECOND -> String.format("%.3f m/s", metersPerSecond(speed));
+            case KILOMETERS_PER_HOUR -> String.format("%.3f km/h", kilometersPerSecond(speed));
         };
     }
 
